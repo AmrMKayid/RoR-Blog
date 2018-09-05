@@ -17,3 +17,19 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  tinymce.remove();
+  tinymce.init({
+    height: '475',
+    selector:'textarea#post_body',
+    plugins: "codesample image media link code",
+    toolbar: "undo redo | styleselect | bold italic link | codesample image media | code"
+  });
+  // 
+  // ClassicEditor
+  //       .create( document.querySelector( 'textarea#post_body' ) )
+  //       .catch( error => {
+  //           console.error( error );
+  //       } );
+})
