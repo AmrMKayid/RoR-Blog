@@ -38,6 +38,10 @@ class Post < ApplicationRecord
     title_changed?
   end
 
+  def display_date
+      "Last Update: #{updated_at.strftime('%-b %-d, %Y @ %-I:%-M %-P')}"
+  end
+
   def display_day_published
     if published_at.present?
       "Published #{published_at.strftime('%-b %-d, %Y')}"
