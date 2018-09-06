@@ -25,9 +25,10 @@
 
           <% if author_signed_in? %>
             <li class="nav-item dropdown author-nav">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <%= link_to 'My posts', authors_posts_path, class: "dropdown-item" %>
+                <%= link_to 'My Posts', authors_posts_path, class: "dropdown-item" %>
+                <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
                 <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
               </div>
             </li>
